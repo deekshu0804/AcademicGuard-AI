@@ -12,35 +12,55 @@ html, body, #root {
 }
 
 :root {
-  --bg0: #f8fafc; --bg1: #ffffff; --bg2: #f1f5f9;
-  --txt: #0f172a;  --txt2: #475569; --txt3: #94a3b8;
-  --border: #e2e8f0; --acc: #2563eb;
+  --bg0: #f8fafc; 
+  --bg1: rgba(255, 255, 255, 0.88); 
+  --bg2: #f1f5f9;
+  --txt: #0f172a;  
+  --txt2: #475569; 
+  --txt3: #94a3b8;
+  --border: rgba(255, 255, 255, 0.7); 
+  --acc: #2563eb;
   
   --bg-primary: var(--bg0);
   --bg-secondary: var(--bg1);
-  --glass: rgba(255, 255, 255, 0.7);
+  --glass: var(--bg1);
   --glass-border: var(--border);
+  --glass-blur: 10px;
+  --glass-shadow: 0 8px 32px rgba(15, 23, 42, 0.08), 0 2px 8px rgba(15, 23, 42, 0.04);
+  --grid-color: rgba(15, 23, 42, 0.03);
+  --stat-text-start: var(--txt);
+  
   --accent-blue: var(--acc);
-  --accent-teal: var(--acc);
+  --accent-teal: #0d9488;
   --accent-amber: #d97706;
   --risk-high: #ef4444;
   --risk-med: #f59e0b;
-  --risk-low: #22c55e;
+  --risk-low: #10b981;
   --text-primary: var(--txt);
   --text-muted: var(--txt2);
 }
 
 html.dark {
-  --bg0: #080c14; --bg1: #0f1521; --bg2: #1a2235;
-  --txt: #f1f5f9;  --txt2: #94a3b8; --txt3: #475569;
-  --border: rgba(99,130,255,0.12); --acc: #4f7cff;
+  --bg0: #080c14; 
+  --bg1: rgba(15, 21, 33, 0.88); 
+  --bg2: #1a2235;
+  --txt: #f1f5f9;  
+  --txt2: #94a3b8; 
+  --txt3: #475569;
+  --border: rgba(99, 130, 255, 0.12); 
+  --acc: #4f7cff;
   
   --bg-primary: var(--bg0);
   --bg-secondary: var(--bg1);
-  --glass: rgba(255, 255, 255, 0.04);
+  --glass: var(--bg1);
   --glass-border: var(--border);
+  --glass-blur: 10px;
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.2);
+  --grid-color: rgba(255, 255, 255, 0.015);
+  --stat-text-start: #ffffff;
+  
   --accent-blue: var(--acc);
-  --accent-teal: var(--acc);
+  --accent-teal: #38bdf8;
   --accent-amber: #f59e0b;
   --text-primary: var(--txt);
   --text-muted: var(--txt2);
@@ -48,10 +68,18 @@ html.dark {
 
 * { transition: background 0.2s, color 0.2s, border-color 0.2s; }
 
+.backdrop-blur-xl,
+.backdrop-blur-2xl,
+.backdrop-blur-lg,
+.backdrop-blur-md {
+  backdrop-filter: blur(var(--glass-blur)) !important;
+  -webkit-backdrop-filter: blur(var(--glass-blur)) !important;
+}
+
 body {
   background-color: var(--bg0) !important;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-image: linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
   background-size: 40px 40px;
   color: var(--txt);
 }

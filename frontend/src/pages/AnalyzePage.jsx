@@ -76,8 +76,8 @@ export default function AnalyzePage() {
           className="flex flex-col md:flex-row justify-between items-center gap-4 bg-[var(--glass)] border border-[var(--glass-border)] backdrop-blur-xl p-4 rounded-2xl corner-brackets shadow-[0_0_20px_rgba(0,0,0,0.3)]"
         >
           <div className="flex items-center gap-4">
-            <NavLink to="/dashboard" className="w-10 h-10 bg-white/5 hover:bg-white/10 rounded-full flex items-center justify-center transition-colors border border-white/10">
-              <ChevronLeft className="text-white" size={20} />
+            <NavLink to="/dashboard" className="w-10 h-10 bg-[var(--bg2)] hover:bg-[var(--glass-border)] rounded-full flex items-center justify-center transition-colors border border-[var(--border)]">
+              <ChevronLeft className="text-[var(--text-primary)]" size={20} />
             </NavLink>
             <div className="relative flex items-center justify-center w-10 h-10">
               <motion.div animate={{ rotate: 360 }} transition={{ duration: 10, repeat: Infinity, ease: 'linear' }} className="absolute inset-0 border border-cyan-500/30 border-dashed rounded-full" />
@@ -107,7 +107,7 @@ export default function AnalyzePage() {
                 className={`flex flex-col items-center p-6 rounded-2xl border-2 transition-all duration-300 w-64 ${mode === 'single' ? 'border-cyan-500 bg-cyan-500/10 shadow-[0_0_20px_rgba(6,182,212,0.2)] scale-105' : 'border-[var(--glass-border)] bg-[var(--glass)] hover:border-cyan-500/50'}`}
               >
                 <FileText className={mode === 'single' ? "text-cyan-400 mb-3" : "text-[var(--text-muted)] mb-3"} size={32} />
-                <span className="font-bold text-white mb-1">Single Analysis</span>
+                <span className="font-bold text-[var(--text-primary)] mb-1">Single Analysis</span>
                 <span className="text-xs text-[var(--text-muted)] text-center">Scan one document</span>
               </button>
 
@@ -119,7 +119,7 @@ export default function AnalyzePage() {
                   <Bot className={mode === 'compare' ? "text-red-400" : "text-[var(--text-muted)]"} size={32} />
                   <FileText className={mode === 'compare' ? "text-cyan-400" : "text-[var(--text-muted)]"} size={32} />
                 </div>
-                <span className="font-bold text-white mb-1">Comparison Mode</span>
+                <span className="font-bold text-[var(--text-primary)] mb-1">Comparison Mode</span>
                 <span className="text-xs text-[var(--text-muted)] text-center">AI vs Human side by side</span>
               </button>
             </div>

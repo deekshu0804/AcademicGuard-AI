@@ -27,7 +27,7 @@ export default function DocumentDropzone({ onFileSelect, file, onClear, label = 
             <FileText className="text-cyan-400" size={24} />
           </div>
           <div>
-            <p className="font-bold text-white truncate max-w-[200px]">{file.name}</p>
+            <p className="font-bold text-[var(--text-primary)] truncate max-w-[200px]">{file.name}</p>
             <p className="text-xs text-cyan-400 font-mono">{(file.size / 1024).toFixed(1)} KB • Ready for scan</p>
           </div>
         </div>
@@ -49,11 +49,11 @@ export default function DocumentDropzone({ onFileSelect, file, onClear, label = 
       className={`border-2 border-dashed rounded-2xl p-8 flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-300 ${
         isDragActive 
           ? 'border-cyan-500 bg-cyan-500/5 shadow-[0_0_20px_rgba(6,182,212,0.3)] scale-[1.02]' 
-          : 'border-white/20 bg-white/[0.02] hover:border-cyan-500/50 hover:bg-white/[0.04]'
+          : 'border-[var(--glass-border)] bg-[var(--glass)] hover:border-cyan-500/50 hover:bg-[var(--bg2)]'
       }`}
     >
       <input {...getInputProps()} />
-      <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+      <div className="w-16 h-16 rounded-full bg-[var(--bg2)] border border-[var(--border)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
         <UploadCloud className={isDragActive ? "text-cyan-400 animate-bounce" : "text-[var(--text-muted)]"} size={32} />
       </div>
       <p className="font-bold text-[var(--text-primary)] mb-1">{label}</p>

@@ -16,7 +16,7 @@ const StatCard = ({ label, value, icon: Icon, color, delay = 0, trend = "+5%", t
       
       <div className="flex justify-between items-start">
         <h3 className="text-[var(--text-muted)] text-xs font-bold uppercase tracking-widest flex items-center gap-2">
-          <div className="p-1.5 rounded-full bg-white/5 border border-white/10">
+          <div className="p-1.5 rounded-full bg-[var(--bg2)] border border-[var(--border)]">
             <Icon size={14} style={{ color }} />
           </div>
           {label}
@@ -31,7 +31,7 @@ const StatCard = ({ label, value, icon: Icon, color, delay = 0, trend = "+5%", t
       <div className="flex items-end gap-3 mt-4">
         <p 
           className="text-5xl font-black drop-shadow-md bg-clip-text text-transparent"
-          style={{ backgroundImage: `linear-gradient(to bottom right, #fff, ${color})` }}
+          style={{ backgroundImage: `linear-gradient(to bottom right, var(--stat-text-start), ${color})` }}
         >
           {value}
         </p>

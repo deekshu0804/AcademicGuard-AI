@@ -54,7 +54,7 @@ export default function ComparisonResults({ result, onReset }) {
           <Microscope className="text-cyan-400" size={24} />
         </div>
         <div>
-          <h2 className="text-xl font-bold text-white tracking-widest uppercase">Comparative Intelligence Report</h2>
+          <h2 className="text-xl font-bold text-[var(--text-primary)] tracking-widest uppercase">Comparative Intelligence Report</h2>
           <p className="text-sm text-cyan-400 font-mono">Divergence Score: {result.divergence_score}%</p>
         </div>
       </div>
@@ -115,9 +115,8 @@ export default function ComparisonResults({ result, onReset }) {
           </ResponsiveContainer>
         </div>
 
-        {/* Forensic Conclusion */}
-        <div className="md:col-span-2 bg-white/[0.03] border border-white/10 rounded-2xl p-6 lg:p-8 corner-brackets">
-          <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+        <div className="md:col-span-2 bg-[var(--glass)] border border-[var(--glass-border)] rounded-2xl p-6 lg:p-8 corner-brackets">
+          <h3 className="text-lg font-bold text-[var(--text-primary)] mb-4 flex items-center gap-2">
             <Microscope className="text-cyan-400" />
             Forensic Conclusion
           </h3>
@@ -126,7 +125,7 @@ export default function ComparisonResults({ result, onReset }) {
           </p>
           
           <div className="mt-8 flex flex-wrap gap-4 pt-6 border-t border-[var(--glass-border)]">
-            <button onClick={onReset} className="px-5 py-2.5 rounded-xl border border-white/10 hover:bg-white/5 transition-colors flex items-center gap-2 text-sm font-bold text-white">
+            <button onClick={onReset} className="px-5 py-2.5 rounded-xl border border-[var(--border)] hover:bg-[var(--bg2)] transition-colors flex items-center gap-2 text-sm font-bold text-[var(--text-primary)]">
               <RefreshCw size={16} /> Analyze Another
             </button>
             <button className="px-5 py-2.5 rounded-xl bg-[var(--glass)] border border-cyan-500/30 hover:bg-cyan-500/10 transition-colors flex items-center gap-2 text-sm font-bold text-cyan-400">

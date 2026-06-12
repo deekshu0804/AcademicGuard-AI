@@ -128,11 +128,11 @@ export default function StudentDetail() {
         {/* Navigation & Hero */}
         <motion.div variants={itemVariants} className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-8">
           <div>
-            <button onClick={() => navigate(-1)} className="group flex items-center text-[var(--text-muted)] hover:text-white transition-colors text-sm font-bold uppercase tracking-wider mb-6">
+            <button onClick={() => navigate(-1)} className="group flex items-center text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-wider mb-6">
               <motion.span whileHover={{ x: -3 }} className="mr-2"><ArrowLeft className="w-4 h-4" /></motion.span> Back to Command
             </button>
             <div className="flex items-center gap-4 mb-2">
-              <h1 className="text-4xl md:text-5xl font-black text-white">{data.name || 'Unknown Target'}</h1>
+              <h1 className="text-4xl md:text-5xl font-black text-[var(--text-primary)]">{data.name || 'Unknown Target'}</h1>
               {isHighRisk && <div className="animate-pulse w-3 h-3 bg-[var(--risk-high)] rounded-full shadow-[0_0_10px_var(--risk-high)]" />}
             </div>
             <div className="flex flex-wrap items-center gap-4">
@@ -210,7 +210,7 @@ export default function StudentDetail() {
                     {i !== data.submissions.length - 1 && <div className="w-0.5 h-full bg-[var(--glass-border)] mt-1" />}
                   </div>
                   <div className="pb-4">
-                    <p className="text-xs font-bold text-white">{sub.assignment_id}</p>
+                    <p className="text-xs font-bold text-[var(--text-primary)]">{sub.assignment_id}</p>
                     <p className="text-[10px] text-[var(--text-muted)] font-mono mt-0.5">Risk: {sub.risk_score.toFixed(1)}</p>
                   </div>
                 </div>
@@ -272,8 +272,8 @@ export default function StudentDetail() {
               whileTap={{ scale: 0.98 }} 
               className={`flex items-center gap-2 px-6 py-3 rounded-xl font-bold transition-all shadow-lg border ${
                 showSettings 
-                  ? 'bg-white/10 border-white/20 text-white' 
-                  : 'bg-[var(--glass)] border-[var(--glass-border)] text-[var(--text-primary)] hover:bg-white/10'
+                  ? 'bg-[var(--bg2)] border-[var(--glass-border)] text-[var(--text-primary)]' 
+                  : 'bg-[var(--glass)] border-[var(--glass-border)] text-[var(--text-primary)] hover:bg-[var(--bg2)]'
               }`}
             >
               <Settings size={18} /> Adjust Thresholds
@@ -289,7 +289,7 @@ export default function StudentDetail() {
                 className="overflow-hidden"
               >
                 <div className="bg-[var(--glass)] border border-[var(--glass-border)] rounded-2xl p-6 relative corner-brackets">
-                  <button onClick={() => setShowSettings(false)} className="absolute top-4 right-4 text-[var(--text-muted)] hover:text-white transition-colors">
+                  <button onClick={() => setShowSettings(false)} className="absolute top-4 right-4 text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors">
                     <X size={20} />
                   </button>
                   <h3 className="text-sm font-bold tracking-widest uppercase mb-4 flex items-center gap-2">

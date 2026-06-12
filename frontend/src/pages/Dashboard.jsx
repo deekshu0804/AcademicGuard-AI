@@ -272,7 +272,7 @@ export default function Dashboard() {
         <motion.div variants={itemVariants} className="bg-[var(--glass)] backdrop-blur-xl border border-[var(--glass-border)] rounded-2xl p-6 relative overflow-hidden corner-brackets shadow-[0_0_20px_rgba(0,0,0,0.2)]">
           <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--accent-blue)] rounded-full blur-[80px] opacity-10 pointer-events-none"></div>
           <div className="mb-6">
-            <h2 className="text-xl font-bold text-white flex items-center gap-2">
+            <h2 className="text-xl font-bold text-[var(--text-primary)] flex items-center gap-2">
               <Activity className="text-[var(--accent-blue)]" size={20} />
               Critical Trajectory
             </h2>

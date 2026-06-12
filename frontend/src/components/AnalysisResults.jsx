@@ -43,7 +43,7 @@ export default function AnalysisResults({ result, filename, onReset }) {
       <div className="bg-[var(--glass)] border border-cyan-500/30 p-6 rounded-2xl flex flex-col md:flex-row md:items-center justify-between gap-4 corner-brackets relative overflow-hidden shadow-[0_0_30px_rgba(6,182,212,0.1)]">
         <div className="absolute right-0 top-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-[80px]" />
         <div>
-          <h2 className="text-xl font-bold text-white mb-1">ANALYSIS COMPLETE</h2>
+          <h2 className="text-xl font-bold text-[var(--text-primary)] mb-1">ANALYSIS COMPLETE</h2>
           <div className="flex items-center gap-4 text-sm text-[var(--text-muted)]">
             <span className="font-mono text-cyan-400">{filename}</span>
             <span>•</span>
@@ -66,8 +66,8 @@ export default function AnalysisResults({ result, filename, onReset }) {
             <p className="text-[var(--text-muted)] mb-3 font-bold uppercase tracking-widest text-xs">Key Findings</p>
             <div className="space-y-2">
               {result.shap_contributions.slice(0, 3).map((s, i) => (
-                <div key={i} className="flex justify-between items-center bg-white/5 px-3 py-2 rounded-lg">
-                  <span className="text-gray-300">{s.feature}</span>
+                <div key={i} className="flex justify-between items-center bg-[var(--bg2)] px-3 py-2 rounded-lg">
+                  <span className="text-[var(--text-primary)]">{s.feature}</span>
                   <span className={`font-mono font-bold ${s.value > 0 ? 'text-red-400' : 'text-green-400'}`}>
                     {s.value > 0 ? '▲' : '▼'} {Math.abs(s.value)}
                   </span>
@@ -117,7 +117,7 @@ export default function AnalysisResults({ result, filename, onReset }) {
 
       {/* Action Buttons */}
       <div className="flex justify-end gap-4 border-t border-[var(--glass-border)] pt-6">
-        <button onClick={onReset} className="px-5 py-2.5 rounded-xl border border-white/10 hover:bg-white/5 transition-colors flex items-center gap-2 text-sm font-bold text-white">
+        <button onClick={onReset} className="px-5 py-2.5 rounded-xl border border-[var(--border)] hover:bg-[var(--bg2)] transition-colors flex items-center gap-2 text-sm font-bold text-[var(--text-primary)]">
           <RefreshCw size={16} /> Analyze Another
         </button>
         <button className="px-5 py-2.5 rounded-xl bg-[var(--glass)] border border-cyan-500/30 hover:bg-cyan-500/10 transition-colors flex items-center gap-2 text-sm font-bold text-cyan-400">

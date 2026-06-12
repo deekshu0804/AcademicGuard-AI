@@ -55,7 +55,7 @@ const RiskRow = ({ student, onClick, index }) => {
       <td className="absolute left-0 top-0 bottom-0 w-1 bg-[var(--accent-teal)] opacity-0 group-hover:opacity-100 transition-opacity shadow-[0_0_10px_var(--accent-teal)]"></td>
       <td className="p-5 pl-8">
         <div className="flex flex-col">
-          <span className="text-white font-semibold text-sm">
+          <span className="text-[var(--text-primary)] font-semibold text-sm">
             {student.name || student.student_name || "Unknown"}
           </span>
           <span className="text-slate-500 text-xs mt-0.5">
@@ -140,7 +140,7 @@ const RiskTable = forwardRef(({ students, externalFilter, onFilterChange }, ref)
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse whitespace-nowrap">
           <thead>
-            <tr className="bg-[var(--glass)] border-b border-[var(--glass-border)]">
+            <tr className="bg-[var(--bg2)] border-b border-[var(--glass-border)]">
               <th className="p-5 pl-8 font-bold text-[var(--text-muted)] text-xs uppercase tracking-widest">Student Target</th>
               <th className="p-5 font-bold text-[var(--text-muted)] text-xs uppercase tracking-widest">Context</th>
               <th className="p-5 font-bold text-[var(--text-muted)] text-xs uppercase tracking-widest">Risk Index</th>
